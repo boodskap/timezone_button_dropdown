@@ -67,14 +67,15 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Container(
         child: TimezoneDropdown(
-          hintText: 'Select Timezone',
+          selectHint: 'Select Timezone',
+          searchHint: 'Search Timezones...',
+          selectedTimezone: null,
           onTimezoneSelected: (timeZone) => print(timeZone),
         ),
       ),
     );
   }
 }
-
 ```
 
 ## License

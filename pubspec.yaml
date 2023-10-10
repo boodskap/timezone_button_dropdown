@@ -1,6 +1,6 @@
 name: timezone_button_dropdown
 description: A dropdown widget contains all available timezones, user can place it anywhere they want and further customize the L&F
-version: 1.0.0
+version: 1.0.1
 homepage: https://boodskap.io
 repository: https://github.com/boodskap/timezone_button_dropdown
 documentation: "https://pub.dev/packages/timezone_button_dropdown#simple-implementation"

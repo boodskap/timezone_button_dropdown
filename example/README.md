@@ -1,16 +1,83 @@
-# example
+<h1 align="center">
+  Flutter TimezoneDropdown
+  <br>
+</h1>
 
-A new Flutter project.
+<h4 align="center">
+  <a href="https://flutter.io" target="_blank">Flutter</a> simple and robust TimzeonDropdown with  search feature, Place it anywhere you need to list all timezones and pick one.
+</h4>
 
-## Getting Started
+<p align="center">
+  <a href="#license">License</a>
+</p>
 
-This project is a starting point for a Flutter application.
+## packages.yaml
+```yaml
+timezone_button_dropdown: <lastest version>
+```
 
-A few resources to get you started if this is your first Flutter project:
+## Import
+```dart
+import 'package:timezone_button_dropdown/timezone_button_dropdown.dart';
+```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Simple implementation
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:timezone_button_dropdown/timezone_button_dropdown.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Timezone Dropdown',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      home: const MyHomePage(title: 'Timezone Drop Down Home Page'),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key, required this.title});
+
+  final String title;
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        title: Text(widget.title),
+      ),
+      body: Container(
+        child: TimezoneDropdown(
+          selectHint: 'Select Timezone',
+          searchHint: 'Search Timezones...',
+          selectedTimezone: null,
+          onTimezoneSelected: (timeZone) => print(timeZone),
+        ),
+      ),
+    );
+  }
+}
+```
+
+## License
+
+MIT
