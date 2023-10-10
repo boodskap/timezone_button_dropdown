@@ -1,30 +1,3 @@
-<h1 align="center">
-  Flutter TimezoneDropdown
-  <br>
-</h1>
-
-<h4 align="center">
-  <a href="https://flutter.io" target="_blank">Flutter</a> simple and robust TimzeonDropdown with  search feature, Place it anywhere you need to list all timezones and pick one.
-</h4>
-
-<p align="center">
-  <a href="#license">License</a>
-</p>
-
-## packages.yaml
-```yaml
-timezone_button_dropdown: <lastest version>
-```
-
-## Import
-```dart
-import 'package:timezone_button_dropdown/timezone_button_dropdown.dart';
-```
-
-
-## Simple implementation
-
-```dart
 import 'package:flutter/material.dart';
 import 'package:timezone_button_dropdown/timezone_button_dropdown.dart';
 
@@ -67,16 +40,12 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Container(
         child: TimezoneDropdown(
-          hintText: 'Select Timezone',
+          selectHint: 'Select Timezone',
+          searchHint: 'Search Timezones...',
+          selectedTimezone: null,
           onTimezoneSelected: (timeZone) => print(timeZone),
         ),
       ),
     );
   }
 }
-
-```
-
-## License
-
-MIT

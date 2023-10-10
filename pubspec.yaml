@@ -1,0 +1,26 @@
+name: timezone_button_dropdown
+description: A dropdown widget contains all available timezones, user can place it anywhere they want and further customize the L&F
+version: 1.0.0
+homepage: https://boodskap.io
+repository: https://github.com/boodskap/timezone_button_dropdown
+documentation: "https://pub.dev/packages/timezone_button_dropdown#simple-implementation"
+publish_to:
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: ">=1.17.0"
+
+dependencies:
+  dropdown_button2: ^2.3.9
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+flutter:
